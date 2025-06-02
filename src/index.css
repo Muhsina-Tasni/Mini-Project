@@ -1,0 +1,11 @@
+
+@import "tailwindcss";n
+
+
+.home-banner{
+background-image: url(/public/images/background.jpg) !important;
+ background-size: cover;
+    background-position: center I!important;
+
+}
+

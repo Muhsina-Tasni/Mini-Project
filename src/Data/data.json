@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Margherita Pizza",
+    "category": "Pizza",
+    "price": 299,
+    "image": "/images/img2.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Pepperoni Pizza",
+    "category": "Pizza",
+    "price": 349,
+    "image": "/images/img2.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Veg Burger",
+    "category": "Burger",
+    "price": 149,
+    "image": "/images/burger.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Chicken Burger",
+    "category": "Burger",
+    "price": 199,
+    "image": "/images/burger.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "French Fries",
+    "category": "Snacks",
+    "price": 99,
+    "image": "/images/fries.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Grilled Sandwich",
+    "category": "Sandwich",
+    "price": 129,
+    "image": "/images/sandwich.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Paneer Wrap",
+    "category": "Wraps",
+    "price": 179,
+    "image": "/images/paneerwrap.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Chicken Wrap",
+    "category": "Wraps",
+    "price": 199,
+    "image": "/images/chickenwrap.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Pasta Alfredo",
+    "category": "Pasta",
+    "price": 229,
+    "image": "/images/alfredo.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Pasta Arrabbiata",
+    "category": "Pasta",
+    "price": 219,
+    "image": "/images/arrabbiata.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Caesar Salad",
+    "category": "Salad",
+    "price": 179,
+    "image": "/images/caesarsalad.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Greek Salad",
+    "category": "Salad",
+    "price": 189,
+    "image": "/images/greeksalad.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Butter Chicken",
+    "category": "Indian",
+    "price": 299,
+    "image": "/images/butterchicken.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Paneer Butter Masala",
+    "category": "Indian",
+    "price": 269,
+    "image": "/images/paneerbutter.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Tandoori Roti",
+    "category": "Indian",
+    "price": 25,
+    "image": "/images/roti.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Chole Bhature",
+    "category": "Indian",
+    "price": 149,
+    "image": "/images/cholebhature.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Masala Dosa",
+    "category": "South Indian",
+    "price": 139,
+    "image": "/images/dosa.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Idli Sambar",
+    "category": "South Indian",
+    "price": 99,
+    "image": "/images/idli.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Veg Biryani",
+    "category": "Biryani",
+    "price": 199,
+    "image": "/images/vegbiryani.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Chicken Biryani",
+    "category": "Biryani",
+    "price": 249,
+    "image": "/images/chickenbiryani.jpg"
+  }
+]
