@@ -31,7 +31,7 @@ const Home = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* Transparent Overlay */}
+
       <div className="absolute top-0 left-0 w-full h-full backdrop-blur-xs z-10"></div>
 
       {/* Animation from AOS */}

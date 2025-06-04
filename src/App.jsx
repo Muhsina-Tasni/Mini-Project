@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 import LogIn from './components/LogIn'
 import ProductList from './components/Menu'
 import Cart from './components/Cart'
-import Dashboard from './components/Dashboard'
+import Admin from './components/Admin'
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Route path='menu' element={<ProductList />} />
           <Route path='login' element={<LogIn />} />
           <Route path='cart' element={<Cart />} />
-          <Route path='dashboard' element={<Dashboard/>}/>
+          <Route path="/admin" element={<Admin />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -3,13 +3,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
+import '/src/index.css'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      <nav className="bg-stone-400 shadow-lg px-6 py-4 relative z-10 border-b">
+      <nav className="bg-stone-400 fixed w-full top-0 left-0   shadow-lg px-6 py-4  relative z-10"     >
+
+{/* <nav
+  className="bg-stone-400 fixed top-0 left-0 w-full shadow-lg px-6 py-4 z-10 border-b"
+  style={{
+    transform: "translateZ(0)",
+    willChange: "transform",
+    backdropFilter: "none",
+    WebkitFontSmoothing: "antialiased",
+  }} */}
+
+
+
 
         <div className="container mx-auto flex items-center justify-between">
           {/* <FontAwesomeIcon icon={faUtensils} style={{ color: "#141414" }} /> */}

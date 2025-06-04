@@ -32,111 +32,111 @@
     "name": "French Fries",
     "category": "Snacks",
     "price": 99,
-    "image": "/images/fries.jpg"
+    "image": "https://whisperofyum.com/wp-content/uploads/2024/10/whisper-of-yum-homemade-french-fries.jpg"
   },
   {
     "id": 6,
     "name": "Grilled Sandwich",
     "category": "Sandwich",
     "price": 129,
-    "image": "/images/sandwich.jpg"
+    "image": "/images/sandwitch.jpeg"
   },
   {
     "id": 7,
     "name": "Paneer Wrap",
     "category": "Wraps",
     "price": 179,
-    "image": "/images/paneerwrap.jpg"
+    "image": "https://www.chefkunalkapur.com/wp-content/uploads/2022/03/paneer-kulcha-roll-1300x867.jpg?v=1647833164"
   },
   {
     "id": 8,
     "name": "Chicken Wrap",
     "category": "Wraps",
     "price": 199,
-    "image": "/images/chickenwrap.jpg"
+    "image": "https://www.chefkunalkapur.com/wp-content/uploads/2022/03/paneer-kulcha-roll-1300x867.jpg?v=1647833164"
   },
   {
     "id": 9,
     "name": "Pasta Alfredo",
     "category": "Pasta",
     "price": 229,
-    "image": "/images/alfredo.jpg"
+    "image": "https://www.sharmispassions.com/wp-content/uploads/2015/12/alfredopasta5.jpg"
   },
   {
     "id": 10,
     "name": "Pasta Arrabbiata",
     "category": "Pasta",
     "price": 219,
-    "image": "/images/arrabbiata.jpg"
+    "image": "https://www.sharmispassions.com/wp-content/uploads/2015/12/alfredopasta5.jpg"
   },
   {
     "id": 11,
     "name": "Caesar Salad",
     "category": "Salad",
     "price": 179,
-    "image": "/images/caesarsalad.jpg"
+    "image": "https://images.immediate.co.uk/production/volatile/sites/30/2014/05/Epic-summer-salad-hub-2646e6e.jpg?quality=90&webp=true&resize=600,545"
   },
   {
     "id": 12,
     "name": "Greek Salad",
     "category": "Salad",
     "price": 189,
-    "image": "/images/greeksalad.jpg"
+    "image": "https://www.tasteofhome.com/wp-content/uploads/2025/02/Favorite-Mediterranean-Salad_EXPS_TOHcom25_41556_MD_P2_02_05_1b.jpg?fit=300,300&webp=1"
   },
   {
     "id": 13,
     "name": "Butter Chicken",
     "category": "Indian",
     "price": 299,
-    "image": "/images/butterchicken.jpg"
+    "image": "https://vismaifood.com/storage/app/uploads/public/cfc/0be/55f/thumb__700_0_0_0_auto.jpg"
   },
   {
     "id": 14,
     "name": "Paneer Butter Masala",
     "category": "Indian",
     "price": 269,
-    "image": "/images/paneerbutter.jpg"
+    "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/07/paneer-butter-masala-recipe.jpg"
   },
   {
     "id": 15,
     "name": "Tandoori Roti",
     "category": "Indian",
     "price": 25,
-    "image": "/images/roti.jpg"
+    "image": "https://i.pinimg.com/736x/7e/c8/49/7ec849ddb02f977d0ebc0c1dcdc14581.jpg"
   },
   {
     "id": 16,
     "name": "Chole Bhature",
     "category": "Indian",
     "price": 149,
-    "image": "/images/cholebhature.jpg"
+    "image": "https://media.vogue.in/wp-content/uploads/2020/08/chole-bhature-recipe.jpg"
   },
   {
     "id": 17,
     "name": "Masala Dosa",
     "category": "South Indian",
     "price": 139,
-    "image": "/images/dosa.jpg"
+    "image": "https://vismaifood.com/storage/app/uploads/public/45a/29b/a17/thumb__700_0_0_0_auto.jpg"
   },
   {
     "id": 18,
     "name": "Idli Sambar",
     "category": "South Indian",
     "price": 99,
-    "image": "/images/idli.jpg"
+    "image": "https://sapanarestaurant.com/wp-content/uploads/2019/11/idli-sambar-900x600.jpg"
   },
   {
     "id": 19,
     "name": "Veg Biryani",
     "category": "Biryani",
     "price": 199,
-    "image": "/images/vegbiryani.jpg"
+    "image": "https://www.pinklungi.com/wp-content/uploads/2023/09/The-Best-Biriyani-in-Kozhikode-and-Where-to-get-it-A-Guide.jpg"
   },
   {
     "id": 20,
     "name": "Chicken Biryani",
     "category": "Biryani",
     "price": 249,
-    "image": "/images/chickenbiryani.jpg"
+    "image": "https://www.pinklungi.com/wp-content/uploads/2023/09/The-Best-Biriyani-in-Kozhikode-and-Where-to-get-it-A-Guide.jpg"
   }
 ]
