@@ -13,23 +13,28 @@ const categories = [
 
 const Menu = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredProducts =
-    selectedCategory === "All"
-      ? products
-      : products.filter(
-          (product) =>
-            product.category?.toLowerCase() === selectedCategory.toLowerCase()
-        );
+  const filteredProducts = products.filter((product) => {
+    const matchesCategory =
+      selectedCategory === "All" ||
+      product.category?.toLowerCase() === selectedCategory.toLowerCase();
+    const matchesSearch = product.name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="p-4 pt-20" id="menu-section">
-      <h1 className="text-5xl font-bold   text-center">MENU</h1>
+      <h1 className="text-5xl font-bold text-center">MENU</h1>
 
-<SearchBar/>
+      {/* Search Bar */}
+      <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
 
       {/* Categories */}
-      <div className="flex flex-wrap justify-evenly  mb-8">
+      <div className="flex flex-wrap justify-evenly mb-8">
         {categories.map((cat) => (
           <div
             key={cat.name}
@@ -53,10 +58,15 @@ const Menu = () => {
         ))}
       </div>
 
+
+
+
       {/* Products */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProducts.length === 0 ? (
-          <p className="col-span-full text-center text-gray-500">No products found.</p>
+          <p className="col-span-full text-center text-gray-500">
+            No products found.
+          </p>
         ) : (
           filteredProducts.map((product, index) => (
             <ProductCard key={index} product={product} />

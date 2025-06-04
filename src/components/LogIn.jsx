@@ -19,7 +19,7 @@ const LogIn = () => {
     if (userName === "admin" && password === "12345") {
     
       dispatch(login({ userName }));
-      navigate("/dashboard");
+      navigate("/admin");
     } else {
       alert("invalid credential");
     }
