@@ -86,56 +86,56 @@
   {
     "id": 13,
     "name": "Butter Chicken",
-    "category": "Indian",
+    "category": "Our Special",
     "price": 299,
     "image": "https://vismaifood.com/storage/app/uploads/public/cfc/0be/55f/thumb__700_0_0_0_auto.jpg"
   },
   {
     "id": 14,
     "name": "Paneer Butter Masala",
-    "category": "Indian",
+    "category": "Our Special",
     "price": 269,
     "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/07/paneer-butter-masala-recipe.jpg"
   },
   {
     "id": 15,
     "name": "Tandoori Roti",
-    "category": "Indian",
+    "category": "Our Special",
     "price": 25,
     "image": "https://i.pinimg.com/736x/7e/c8/49/7ec849ddb02f977d0ebc0c1dcdc14581.jpg"
   },
   {
     "id": 16,
     "name": "Chole Bhature",
-    "category": "Indian",
+    "category": "Our Special",
     "price": 149,
     "image": "https://media.vogue.in/wp-content/uploads/2020/08/chole-bhature-recipe.jpg"
   },
   {
     "id": 17,
     "name": "Masala Dosa",
-    "category": "South Indian",
+    "category": "Our Special",
     "price": 139,
     "image": "https://vismaifood.com/storage/app/uploads/public/45a/29b/a17/thumb__700_0_0_0_auto.jpg"
   },
   {
     "id": 18,
     "name": "Idli Sambar",
-    "category": "South Indian",
+    "category": "Our Special",
     "price": 99,
     "image": "https://sapanarestaurant.com/wp-content/uploads/2019/11/idli-sambar-900x600.jpg"
   },
   {
     "id": 19,
     "name": "Veg Biryani",
-    "category": "Biryani",
+    "category": "Our Special",
     "price": 199,
     "image": "https://www.pinklungi.com/wp-content/uploads/2023/09/The-Best-Biriyani-in-Kozhikode-and-Where-to-get-it-A-Guide.jpg"
   },
   {
     "id": 20,
     "name": "Chicken Biryani",
-    "category": "Biryani",
+    "category": "Our Special",
     "price": 249,
     "image": "https://www.pinklungi.com/wp-content/uploads/2023/09/The-Best-Biriyani-in-Kozhikode-and-Where-to-get-it-A-Guide.jpg"
   }
