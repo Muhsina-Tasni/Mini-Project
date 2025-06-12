@@ -7,8 +7,8 @@ import ProductList from "./components/Menu";
 import Cart from "./components/Cart";
 import Admin from "./components/Admin";
 import User from "./components/User";
-import AdminRoutes from "./routes/adminRoutes";
-import UserRoutes from "./routes/userRoutes";
+import AdminRoutes from "./routes/AdminRoutes";
+import UserRoutes from "./routes/UserRoutes";
 
 function App() {
   return (
