@@ -2,13 +2,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Menu from "../components/Menu";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-
-   const navigate = useNavigate();
-
-
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({
@@ -31,7 +28,6 @@ const Home = () => {
         Your browser does not support the video tag.
       </video>
 
-
       <div className="absolute top-0 left-0 w-full h-full backdrop-blur-xs z-10"></div>
 
       {/* Animation from AOS */}
@@ -49,29 +45,37 @@ const Home = () => {
             From Your Favorite Kitchens to Your Table
           </p>
 
-         
           <div className="flex justify-center gap-4 flex-wrap">
-            <button>
+            {/* <button>
               <a
                   onClick={() => navigate("/login")}
                 className="text-white bg-gray-800 hover:bg-blue-800  font-medium rounded-full text-sm px-5 py-2.5 text-center"
               >
                Order Now
               </a>
-            </button>
+            </button> */}
 
-            <button>
-              <a
-                href="#menu-section"
+            <a>
+              <button
+                onClick={() => navigate("/login")}
+                className="text-white bg-gray-800 hover:bg-blue-800  font-medium rounded-full text-sm px-5 py-2.5 text-center"
+              >
+                Order Now
+              </button>
+            </a>
+
+            <a>
+              <button
+                onClick={() => navigate("/menu")}
                 className="text-white bg-gray-800 hover:bg-blue-800  font-medium rounded-full text-sm px-5 py-2.5 text-center"
               >
                 Browse Menu
-              </a>
-            </button>
+              </button>
+            </a>
           </div>
         </div>
       </div>
-      
+
       <Menu />
     </div>
   );
