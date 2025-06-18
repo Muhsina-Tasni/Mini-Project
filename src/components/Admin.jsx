@@ -1,10 +1,11 @@
 import Logout from "../components/Logout.jsx";
 import food from "../Data/data.json";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteProduct } from "../Redux/productSlice";
+// import { deleteProduct } from '../Redux/ProductSlice.js'
 import { HandHeart } from "lucide-react";
 import { useState } from "react";
 import AdminForm from "./AdminForm.jsx";
+import { deleteProduct } from "../Redux/productSlice.js";
 // admin page
 const Admin = () => {
   // foodproducts product store

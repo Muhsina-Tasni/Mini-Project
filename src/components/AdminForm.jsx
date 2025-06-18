@@ -1,7 +1,8 @@
-import { addProduct } from "../Redux/productSlice";
+
 import { ChefHat, Upload, DollarSign, Package, Utensils } from "lucide-react";
 import food from "../Data/data.json";
 import { useSelector } from "react-redux";
+import { addProduct } from "../Redux/productSlice";
 const AdminForm = () => {
   const foodproducts = useSelector((state) => state.products);
 

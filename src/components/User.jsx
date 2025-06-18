@@ -3,7 +3,7 @@ import Logout from "./Logout";
 import {useSelector } from "react-redux";
 import Menu from "./Menu";
 import { Link } from "react-router-dom";
-import { Utensils, Star, ShoppingCart, User, HandHeart } from "lucide-react";
+import { Utensils, Star, ShoppingCart, HandHeart } from "lucide-react";
 
 
 const UserDashboard = () => {
