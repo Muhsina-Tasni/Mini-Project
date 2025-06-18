@@ -18,6 +18,7 @@ const Admin = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
+
       <div className="min-h-screen bg-gray-100">
         {/* welcome section */}
         <div className="flex justify-between p-10 align-middle">
