@@ -5,7 +5,7 @@ import { HandHeart } from "lucide-react";
 import { useState } from "react";
 import AdminForm from "./AdminForm.jsx";
 import { deleteProduct } from "../redux/productSlice.js";
-// admin page
+//adminpage
 const Admin = () => {
   // foodproducts product store
   const foodproducts = useSelector((state) => state.products);
