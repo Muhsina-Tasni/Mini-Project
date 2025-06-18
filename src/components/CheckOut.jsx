@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { clearCart } from "../Redux/cartSlice";
+import { clearCart } from "../redux/cartSlice";
 import Swal from "sweetalert2";
 
 const Checkout = () => {
