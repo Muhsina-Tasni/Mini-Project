@@ -1,26 +1,43 @@
+import { addToCart } from "../Redux/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+
 const ProductCard = ({ product }) => {
-  const { image, name, category, price } = product;
+  const dispatch = useDispatch();
+  // desturing the product
+  const { image, name, category, price, id } = product;
+ 
+
+  // function to add to the cart
+  const handleCart = (product) => {
+     dispatch(addToCart(product));
+    
+  };
 
   return (
-    <div
-      className="bg-gray-100  rounded-lg shadow-md p-4 hover:shadow-lg transition mr-5 "
-      // style={{ width: '100%', maxWidth: '250px', margin: 'auto' }}
-    >
-      {product.image ? 
+    <div className="bg-gray-100 rounded-lg shadow-md p-4 hover:shadow-lg transition mr-5  hover:scale-105  ">
+      {/* for display image otherwise display the default image */}
+      {image ? (
         <img
           src={image}
           alt={name}
           className="w-full h-40 object-cover rounded"
-        />: 
-        // <p>hello</p>
-        <img src="../public/images/default.png"
-        className="w-full h-40 object-cover rounded" />
-      }
+        />
+      ) : (
+        <img
+          src="../public/images/default.png"
+          alt="default"
+          className="w-full h-40 object-cover rounded"
+        />
+      )}
 
       <h2 className="text-xl font-semibold mt-2">{name}</h2>
       <p className="text-green-600 font-bold">₹{price}</p>
       <p className="text-gray-500">{category}</p>
-      <button className="mt-2 bg-blue-800 text-white px-4 py-2 rounded hover:bg-green-600">
+{/* to add to the cart */}
+      <button
+        onClick={() => handleCart(product)}
+        className="mt-2 bg-blue-800 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer"
+      >
         Add to Cart
       </button>
     </div>

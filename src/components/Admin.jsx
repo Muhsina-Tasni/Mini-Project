@@ -1,146 +1,84 @@
-
-
-
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-
+import Logout from "../components/Logout.jsx";
+import food from "../Data/data.json";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteProduct } from "../Redux/productSlice";
+import { HandHeart } from "lucide-react";
+import { useState } from "react";
+import AdminForm from "./AdminForm.jsx";
+// admin page
 const Admin = () => {
-
-const user = useSelector(state=>state.slice.user)
-console.log(user,"user")
-
-
-  const [products, setProducts] = useState([]);
-  const [newName, setNewName] = useState("");
-  const [editingId, setEditingId] = useState(null);
-  const [editName, setEditName] = useState("");
-
-  // 🔁 Load from localStorage on mount
-  useEffect(() => {
-    const stored = localStorage.getItem("products");
-    if (stored) {
-      setProducts(JSON.parse(stored));
-    }
-  }, []);
-
-  // 💾 Save to localStorage on products change
-  useEffect(() => {
-    localStorage.setItem("products", JSON.stringify(products));
-  }, [products]);
-
-  // ➕ Create
-  const handleAdd = () => {
-    if (newName.trim() === "") return;
-    const newProduct = {
-      id: Date.now(),
-      name: newName.trim(),
-    };
-    setProducts([...products, newProduct]);
-    setNewName("");
-  };
-
-  // ❌ Delete
-  const handleDelete = (id) => {
-    setProducts(products.filter((p) => p.id !== id));
-  };
-
-  // ✏️ Start editing
-  const handleEdit = (id, name) => {
-    setEditingId(id);
-    setEditName(name);
-  };
-
-  // ✅ Save update
-  const handleUpdate = () => {
-    setProducts(
-      products.map((p) =>
-        p.id === editingId ? { ...p, name: editName } : p
-      )
-    );
-    setEditingId(null);
-    setEditName("");
-  };
-
+  // foodproducts product store
+  const foodproducts = useSelector((state) => state.products);
+  //food items stored in menuitems variable from data.json and product store
+  const menuitems = [...foodproducts, ...food];
+  // to get the person
+  const person = useSelector((state) => state.slice.user);
+  const dispatch = useDispatch();
+  // state
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <div className="p-6 max-w-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-center">Admin Panel</h1>
+    <>
+      <div className="min-h-screen bg-gray-100">
+        {/* welcome section */}
+        <div className="flex justify-between p-10 align-middle">
+          <div className="flex">
+            <HandHeart className="h-15 w-15 text-blue-400" />
+            <p className="text-4xl ml-5"> welcome ,{person.userName} </p>
+          </div>
+          {/* //logout button and show button*/}
+          <div className="flex gap-4">
+            <div>
+              <Logout />
+            </div>
 
-{user?.userName &&
-<h2  >admin:{user.userName}</h2>
-}
+            <div>
+              <button
+                onClick={() => setShowMenu(!showMenu)}
+                className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition cursor-pointer"
+              >
+                {showMenu ? "Hide Menu" : "Show Menu"}
+              </button>
+            </div>
+          </div>
+        </div>
 
-
-
-      {/* Input to Add Product */}
-      <div className="flex gap-2 mb-6">
-        <input
-          type="text"
-          value={newName}
-          onChange={(e) => setNewName(e.target.value)}
-          placeholder="Enter product name"
-          className="border border-gray-300 rounded p-2 flex-1"
-        />
-        <button
-          onClick={handleAdd}
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-        >
-          Add
-        </button>
-      </div>
-
-
-<ul>
-       {products?.map ((p) => (
-          <li
-            key={p.id}
-            className="flex justify-between items-center border-b py-2"
-          >
-            {editingId === p.id ? (
-              <>
-                <input
-                  value={editingName}
-                  onChange={(e) => setEditingName(e.target.value)}
-                  className="border px-2 py-1 rounded mr-2 flex-grow"
-                />
-                <button
-                  onClick={() => handleUpdate(p.id)}
-                  className="bg-green-500 text-white px-2 py-1 rounded mr-2"
+        {/* Product List Section */}
+        {showMenu && (
+          <div className="mx-10  rounded-lg  p-6" id="menu">
+            <h2 className="text-4xl mb-4 text-center font-semibold mb-6">
+              Current Menu
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 ">
+              {menuitems.map((product) => (
+                <div
+                  key={product.id}
+                  className="bg-gray-50 p-4 rounded-xl  relative shadow-2xl"
                 >
-                  Save
-                </button>
-                <button
-                  onClick={() => setEditingId(null)}
-                  className="text-gray-500"
-                >
-                  Cancel
-                </button>
-              </>
-            ) : (
-              <>
-                <span>{p.name}</span>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => handleEdit(p.id, p.name)}
-                    className="text-blue-600"
-                  >
-                    Edit
-                 </button>
-                 <button
-                    onClick={() => handleDelete(p.id)}
-                    className="text-red-600"
-                  >
-                    Delete
-                  </button>
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-20 object-cover rounded-md mb-2"
+                  />
+                  <h3 className="text-lg font-bold">{product.name}</h3>
+                  <p className="text-sm text-gray-600">${product.price}</p>
+                  <p className="text-sm text-gray-600">Qty: {product.count}</p>
+                  <div className="flex space-x-2 mt-3">
+                    <button
+                      onClick={() => dispatch(deleteProduct(product.id))}
+                      className="bg-blue-600    hover:bg-red-500 px-3 py-1 rounded text-sm text-white cursor-pointer hover:bg-red-600 transition"
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
-              </>
-            )}
-          </li>
-        ))}
-      </ul> 
-
-
-
-    </div>
+              ))}
+            </div>
+          </div>
+        )}
+{/* admin form  component */}
+        <AdminForm />
+      </div>
+    </>
   );
 };
 
