@@ -1,47 +1,50 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+// imported
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import "/src/index.css";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 
 const Navbar = () => {
+  // for hamberger menu
   const [isOpen, setIsOpen] = useState(false);
+  const { isAuthenticated, user } = useSelector((state) => state.slice);
+  const navigate = useNavigate();
+
+  // created button for the login and navigate under the condition
+  const handleClick = () => {
+    if (isAuthenticated && user?.role === "admin") {
+      navigate("/admin");
+    } else if (isAuthenticated && user?.role === "user") {
+      navigate("/user");
+    } else {
+      navigate("/login");
+    }
+}
 
   return (
+    // navbar
     <>
-      <nav className="bg-stone-400 fixed w-full top-0 left-0   shadow-lg px-6 py-4  relative z-10">
-        <div className="container mx-auto flex items-center justify-between">
-          {/* <FontAwesomeIcon icon={faUtensils} style={{ color: "#141414" }} /> */}
-          <div className="text-3xl font-extrabold text-gray-800 tracking-wide">
-            The Great Indian Kitchen
+      <nav className="bg-gray-300 fixed w-full top-0 left-0   shadow-lg px-6 py-4  relative z-10">
+        <div className="nav-container mx-auto flex items-center justify-between">
+          <div className="flex items-center space-x-2 text-3xl font-extrabold text-white-800 tracking-wide">
+            <span>The Great Indian Kitchen</span>
           </div>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex space-x-8 text-gray-800 font-semibold">
+          <div className="hidden md:flex space-x-8 text-black hover:font-extrabold  font-semibold">
             <Link
               to={"/"}
-              className="hover:text-red-600 transition duration-300"
+              className="hover:text-blue-600 transition duration-300"
             >
               Home
             </Link>
-            <Link
-              to={"/menu"}
-              className="hover:text-red-600 transition duration-300"
-            >
-              Menu
-            </Link>
-            <Link
-              to={"/login"}
-              className="hover:text-red-600 transition duration-300"
-            >
-              Log In
-            </Link>
-            <Link
-              to={"/cart"}
-              className="hover:text-red-600 transition duration-300"
-            >
-              Cart
-            </Link>
+            <button
+             onClick={handleClick} className="hover:text-blue-600 transition duration-300  cursor-pointer">
+              Login
+            
+            </button>
           </div>
 
           {/* Hamburger Button */}
@@ -88,31 +91,22 @@ const Navbar = () => {
           <Link
             to={"/"}
             onClick={() => setIsOpen(false)}
-            className="hover:text-red-600"
+            className="hover:text-blue-600 transition duration-300"
           >
             Home
           </Link>
-          <Link
-            to={"/menu"}
-            onClick={() => setIsOpen(false)}
-            className="hover:text-red-600"
-          >
-            Menu
-          </Link>
-          <Link
-            to={"/login"}
-            onClick={() => setIsOpen(false)}
-            className="hover:text-red-600"
-          >
-            Log In
-          </Link>
-          <Link
-            to={"/cart"}
-            onClick={() => setIsOpen(false)}
-            className="hover:text-red-600"
-          >
-            Cart
-          </Link>
+
+<button
+  onClick={() => {
+    setIsOpen(false);
+    handleClick();
+  }}
+  className="hover:text-blue-600 transition duration-300   text-left"
+>
+  Login
+</button>
+
+
         </div>
       </nav>
 

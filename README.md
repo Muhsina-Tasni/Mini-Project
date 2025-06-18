@@ -1,7 +1,11 @@
 # Mini-Project
 
-The Food Order Website is an online platform designed to provide users with a
-seamless experience for browsing, selecting, and ordering food from a variety of
-categories. This system aims to enhance user convenience by offering a responsive
-and intuitive interface with features such as menu browsing, cart management, order
-summary, and checkout.
+The Great Indian Kitchen is a web-based application built using
+React, designed to facilitate seamless online shopping by
+allowing users to browse products, add items to their cart, and
+complete purchases.
+
+
+deployed the site through vercel
+ and link for the site
+ ' https://mini-project-beta-tawny.vercel.app/'
