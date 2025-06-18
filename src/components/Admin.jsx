@@ -1,12 +1,11 @@
 import Logout from "../components/Logout.jsx";
 import food from "../Data/data.json";
 import { useDispatch, useSelector } from "react-redux";
-// import { deleteProduct } from '../Redux/ProductSlice.js'
 import { HandHeart } from "lucide-react";
 import { useState } from "react";
 import AdminForm from "./AdminForm.jsx";
-import { deleteProduct } from "../Redux/productSlice.js";
-// admin page
+import { deleteProduct } from "../redux/productSlice.js";
+//adminpage
 const Admin = () => {
   // foodproducts product store
   const foodproducts = useSelector((state) => state.products);
@@ -19,6 +18,7 @@ const Admin = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <>
+
       <div className="min-h-screen bg-gray-100">
         {/* welcome section */}
         <div className="flex justify-between p-10 align-middle">

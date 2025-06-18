@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import { login } from "../Redux/slice";
+import { login } from "../redux/slice";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 
